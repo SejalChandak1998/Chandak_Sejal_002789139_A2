@@ -5,15 +5,18 @@
 package UI.SystemAdmin;
 
 import Model.Doctor.DoctorDirectory;
+import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
+import Model.Vitals.VitalsDirectory;
 import java.awt.Component;
 import javax.swing.*;
 
 
 /**
  *
- * @author sohamdeshpande
+ * @author sejalchandak
  */
 import java.awt.Window;
 public class LoginAdminJPanel extends javax.swing.JPanel {
@@ -25,12 +28,18 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
+    PatientDirectory PatientDirectory;
+    EncounterDirectory EncounterDirectory;
+    VitalsDirectory VitalsDirectory;
     
-    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory) {
+    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
+        this.PatientDirectory = PatientDirectory;
+        this.EncounterDirectory = EncounterDirectory;
+        this.VitalsDirectory = VitalsDirectory;
     }
 
     /**
@@ -53,12 +62,6 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
         lblUsername.setText("Username:");
 
         lblPassword.setText("Password:");
-
-        txtUsername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsernameActionPerformed(evt);
-            }
-        });
 
         btnLogIn.setText("Log In");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +133,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
 
         if(Username.equals("Admin") && Password.equals("Admin")){
 
-            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory).show();
+            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
             //To dispose a Frame from Panel
             Component comp = SwingUtilities.getRoot(this);
             ((Window) comp).dispose();
@@ -151,10 +154,6 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_btnLogInKeyPressed
-
-    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogIn;
