@@ -4,6 +4,7 @@
  */
 package UI.Hospital;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.Hospital;
@@ -33,8 +34,9 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public HospitalReadAdminJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public HospitalReadAdminJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -42,6 +44,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
         populateTable();
     }
 
@@ -232,7 +235,7 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogOut1.setText("Log Out");
+        btnLogOut1.setText("Back");
         btnLogOut1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOut1ActionPerformed(evt);
@@ -506,13 +509,13 @@ public class HospitalReadAdminJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHospitalDeleteActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new AdminJFrame(SignUpDirectory, HospitalDirectory,DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new AdminJFrame(SignUpDirectory, HospitalDirectory,DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnLogOut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOut1ActionPerformed
-        new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
+        new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnLogOut1ActionPerformed
 
     /**

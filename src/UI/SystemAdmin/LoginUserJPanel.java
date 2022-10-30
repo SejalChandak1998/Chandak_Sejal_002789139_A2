@@ -4,6 +4,7 @@
  */
 package UI.SystemAdmin;
 
+import Model.Community.CommunityDirectory;
 import UI.Hospital.HospitalLoginJFrame;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
@@ -34,8 +35,9 @@ public class LoginUserJPanel extends javax.swing.JPanel {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public LoginUserJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public LoginUserJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -43,6 +45,7 @@ public class LoginUserJPanel extends javax.swing.JPanel {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -116,28 +119,28 @@ public class LoginUserJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonActionPerformed
-        new PersonJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
+        new PersonJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).show();
         Component comp = SwingUtilities.getRoot(this);
         ((Window) comp).dispose();
     }//GEN-LAST:event_btnPersonActionPerformed
 
     private void btnHospitalAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalAdminActionPerformed
         // TODO add your handling code here:
-        new HospitalLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
+        new HospitalLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).show();
         Component comp = SwingUtilities.getRoot(this);
         ((Window) comp).dispose();
     }//GEN-LAST:event_btnHospitalAdminActionPerformed
 
     private void btnDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorActionPerformed
         // TODO add your handling code here:
-        new DoctorLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
+        new DoctorLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).show();
         Component comp = SwingUtilities.getRoot(this);
         ((Window) comp).dispose();
     }//GEN-LAST:event_btnDoctorActionPerformed
 
     private void btnPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientActionPerformed
         // TODO add your handling code here:
-        new PatientLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
+        new PatientLoginJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).show();
         Component comp = SwingUtilities.getRoot(this);
         ((Window) comp).dispose();
     }//GEN-LAST:event_btnPatientActionPerformed

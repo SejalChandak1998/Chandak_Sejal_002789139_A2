@@ -56,7 +56,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
         txtNameSignUp = new javax.swing.JTextField();
         btnSignUp = new javax.swing.JButton();
         txtDoBSignUp = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
         txtAgeSignUp = new javax.swing.JTextField();
         txtAddressSignUp = new javax.swing.JTextField();
         txtCitySignUp = new javax.swing.JTextField();
@@ -107,13 +106,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
         txtDoBSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDoBSignUpKeyPressed(evt);
-            }
-        });
-
-        btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
             }
         });
 
@@ -182,10 +174,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(522, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(153, 153, 153)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -225,9 +213,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBack)
-                .addGap(56, 56, 56)
+                .addGap(85, 85, 85)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName)
                     .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -371,7 +357,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         su.setCreatePassword(CreatePassword);
         su.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Person Details Created");
+        JOptionPane.showMessageDialog(this, "New Person Details Created and your Person ID is: " + su.getPersonID());
 
         txtNameSignUp.setText("");
         txtDoBSignUp.setText("");
@@ -388,11 +374,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private void txtDoBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoBSignUpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDoBSignUpActionPerformed
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtPinCodeSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinCodeSignUpActionPerformed
         // TODO add your handling code here:
@@ -444,7 +425,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtConfirmPasswordSignUpKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSignUp;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;

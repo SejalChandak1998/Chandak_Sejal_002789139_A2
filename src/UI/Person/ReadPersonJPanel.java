@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI.SystemAdmin;
+package UI.Person;
 
 import Model.Doctor.Doctor;
 import Model.Doctor.DoctorDirectory;
@@ -20,10 +20,10 @@ import javax.swing.table.TableRowSorter;
  *
  * @author sejalchandak
  */
-public class ReadAdminJPanel extends javax.swing.JPanel {
+public class ReadPersonJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ReadAdminJPanel
+     * Creates new form ReadPersonJPanel
      */
     
     SignUpDirectory SignUpDirectory;
@@ -32,7 +32,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
     PatientDirectory PatientDirectory;
     
     
-    public ReadAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory) {
+    public ReadPersonJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory) {
         initComponents();
         
         this.SignUpDirectory = SignUpDirectory;
@@ -87,7 +87,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "PersonID", "Name", "DoB", "Age", "Address", "City", "State", "Pin Code", "Password"
+                "Name", "PersonID", "DoB", "Age", "Address", "City", "State", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -351,7 +351,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp su = (SignUp) model.getValueAt(tblPersonDirectory.getSelectedRow(), 1);
+        SignUp su = (SignUp) model.getValueAt(tblPersonDirectory.getSelectedRow(), 0);
         
         if (tblPersonDirectory.getSelectedRowCount()==1) {
             
@@ -450,7 +450,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         su.setConfirmPassword(ConfirmPassword);
 
         
-        model.setValueAt(Name, tblPersonDirectory.getSelectedRow(), 1);
+        model.setValueAt(Name, tblPersonDirectory.getSelectedRow(), 0);
         model.setValueAt(DoB, tblPersonDirectory.getSelectedRow(), 2);
         model.setValueAt(Age, tblPersonDirectory.getSelectedRow(), 3);
         model.setValueAt(Address, tblPersonDirectory.getSelectedRow(), 4);
@@ -460,6 +460,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         model.setValueAt(CreatePassword, tblPersonDirectory.getSelectedRow(), 8);
         //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 8);
         
+        populateTable();
         JOptionPane.showMessageDialog(this, "Person Details Updated");
 
         txtNameSignUp.setText("");
@@ -481,7 +482,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                     d.setState(State);
                     d.setPinCode(PinCode);
                 }
-        populateTable();
+        
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
     }
     }
@@ -509,7 +510,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);
+        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,0);
         
         txtNameSignUp.setText(String.valueOf(selectedSignUp.getName()));
         txtDoBSignUp.setText(String.valueOf(selectedSignUp.getDoB()));
@@ -536,17 +537,28 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);     
+        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,0);     
         SignUpDirectory.deleteEmployee(selectedSignUp);
+        
+        populateTable();
+        
+        JOptionPane.showMessageDialog(this, "Person Details deleted.");
+        
+        txtNameSignUp.setText("");
+        txtDoBSignUp.setText("");
+        txtAgeSignUp.setText("");
+        txtAddressSignUp.setText("");
+        txtCitySignUp.setText("");
+        txtStateSignUp.setText("");
+        txtPinCodeSignUp.setText("");
+        txtCreatePasswordSignUp.setText("");
+        txtConfirmPasswordSignUp.setText("");
         
         for (Doctor d : DoctorDirectory.getDoctorDirectory()){
                 if (String.valueOf(d.getDoctorName()).equals(txtNameSignUp.getText())){
                    DoctorDirectory.deleteEmployee(d);
-                }
-        
-        JOptionPane.showMessageDialog(this, "Person Details deleted.");
-        
-        populateTable();                      
+                }  
+                           
     }//GEN-LAST:event_btnPersonDeleteActionPerformed
     }
     private void txtCreatePasswordSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreatePasswordSignUpActionPerformed
@@ -652,8 +664,8 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         for (SignUp su : SignUpDirectory.getSignUpDirectory()){
             
             Object[] row = new Object[9];
-            row[0] = su.getPersonID();
-            row[1] = su;
+            row[0] = su;
+            row[1] = su.getPersonID();
             row[2] = su.getDoB();
             row[3] = su.getAge();
             row[4] = su.getAddress();
@@ -662,7 +674,6 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             row[7] = su.getPinCode();
             row[8] = su.getCreatePassword();
             //row[8] = su.getConfirmPassword();
-            
             
             model.addRow(row);
             

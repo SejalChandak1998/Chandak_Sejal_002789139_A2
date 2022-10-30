@@ -4,6 +4,7 @@
  */
 package UI.Hospital;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.Hospital;
@@ -31,8 +32,9 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public HospitalLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public HospitalLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -40,6 +42,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -82,7 +85,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogOut.setText("Log Out");
+        btnLogOut.setText("Back");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -148,7 +151,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
         {
                 if ((String.valueOf(selectedSignUp.getHospitalID()).equals(txtHospitalID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
                 {
-                    new IndividualHospitalJFrame (SignUpDirectory, HospitalDirectory, txtHospitalID.getText(),DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+                    new IndividualHospitalJFrame (SignUpDirectory, HospitalDirectory, txtHospitalID.getText(),DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
                     this.dispose();
                     break;
                 }
@@ -164,8 +167,8 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
+        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     /**
