@@ -40,21 +40,19 @@
                                   <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNameSignUp" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="txtPersonID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="txtHospitalName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="txtHospitalID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtNameSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="txtAgeSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtPersonID" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="txtHospitalName" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="txtHospitalID" alignment="0" pref="250" max="32767" attributes="0"/>
                                   <Component id="btnSubmit" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCreatePasswordDoctor1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtConfirmPasswordDoctor1" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="lblName1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -129,19 +127,19 @@
                   <Component id="lblPinCode" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtPinCodeSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblCreatePassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCreatePasswordDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCreatePasswordDoctor1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtConfirmPasswordDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtConfirmPasswordDoctor1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="302" max="32767" attributes="0"/>
+              <EmptySpace pref="304" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -319,19 +317,6 @@
         <Property name="text" type="java.lang.String" value="State:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtConfirmPasswordDoctor">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtConfirmPasswordDoctorActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtConfirmPasswordDoctorKeyPressed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblPinCode">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -339,19 +324,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pin Code:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtCreatePasswordDoctor">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCreatePasswordDoctorActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCreatePasswordDoctorKeyPressed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCreatePassword">
       <Properties>
@@ -426,6 +398,24 @@
       <Events>
         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddressSignUpKeyPressed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtCreatePasswordDoctor1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtConfirmPasswordDoctor1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
