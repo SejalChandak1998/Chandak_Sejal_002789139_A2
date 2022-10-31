@@ -89,21 +89,26 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         btnPersonDelete = new javax.swing.JButton();
         btnUpdateSignUp = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 255));
+
         jLabel1.setText("Doctor ID:");
 
         txtDoctorID.setEditable(false);
+        txtDoctorID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtDoctorID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoctorIDActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("Doctor's Name:");
+        jLabel5.setText("Doctor Name:");
 
         txtDoctorName.setEditable(false);
+        txtDoctorName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setText("Search:");
 
+        txtSearchPerson.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtSearchPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchPersonActionPerformed(evt);
@@ -118,6 +123,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         jLabel2.setText("Vitals History");
 
+        tblVitalsDirectory.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tblVitalsDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -139,34 +145,48 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblVitalsDirectory);
 
-        jLabel4.setText("Patient's Name:");
+        jLabel4.setText("Patient Name:");
 
         txtPatientName.setEditable(false);
+        txtPatientName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setText("Encounter ID:");
 
         txtEncounterID.setEditable(false);
+        txtEncounterID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel7.setText("Patient ID:");
 
         txtPatientID.setEditable(false);
+        txtPatientID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel12.setText("Date:");
 
         txtDate.setEditable(false);
+        txtDate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel13.setText("Time Stamp:");
 
         txtTimeStamp.setEditable(false);
+        txtTimeStamp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel8.setText("Temperature:");
 
+        txtTemperature.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel10.setText("Heart Rate:");
 
-        jLabel9.setText("BP Systolic (H):");
+        txtHeartRate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel11.setText("BP Diastolic (L):");
+        jLabel9.setText("Systolic BP:");
 
+        txtBPS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        txtBPD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel11.setText("Diastolic BP:");
+
+        btnView.setBackground(new java.awt.Color(153, 255, 255));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +194,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPersonDelete.setBackground(new java.awt.Color(153, 255, 255));
         btnPersonDelete.setText("Delete");
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +202,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdateSignUp.setBackground(new java.awt.Color(153, 255, 255));
         btnUpdateSignUp.setText("Update");
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,11 +220,12 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1)
                             .addGroup(layout.createSequentialGroup()
@@ -216,7 +239,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtDoctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
+                                        .addComponent(txtDoctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE))
                                     .addComponent(txtSearchPerson)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,51 +251,52 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel6)
                                             .addComponent(jLabel12))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnView)
+                                                .addGap(65, 65, 65)
+                                                .addComponent(btnUpdateSignUp)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnPersonDelete))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                .addComponent(txtBPS)
+                                                                .addComponent(txtTemperature, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addGap(11, 11, 11)
+                                                                    .addComponent(jLabel11))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                    .addComponent(jLabel10))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                    .addComponent(jLabel13))))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(txtEncounterID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                            .addComponent(jLabel7)))
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addComponent(txtBPS)
-                                                            .addComponent(txtTemperature, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addGap(11, 11, 11)
-                                                                .addComponent(jLabel11))
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel10))
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel13))))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(txtEncounterID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(jLabel7)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(txtHeartRate)
-                                                        .addComponent(txtBPD)
-                                                        .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnView)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnPersonDelete)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnUpdateSignUp)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(27, 27, 27))
+                                                            .addComponent(txtHeartRate)
+                                                            .addComponent(txtBPD)
+                                                            .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(27, 27, 27))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -317,7 +341,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel11)
                     .addComponent(txtBPS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtBPD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
