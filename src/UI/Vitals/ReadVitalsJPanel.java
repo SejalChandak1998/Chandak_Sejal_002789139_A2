@@ -19,7 +19,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class ReadVitalsJPanel extends javax.swing.JPanel {
 
@@ -381,9 +381,9 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         }
 
         DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
-        Doctor selectedSignUp = (Doctor) model.getValueAt(selectedRowIndex,0);
+        Vitals selectedSignUp = (Vitals) model.getValueAt(selectedRowIndex,0);
 
-        DoctorDirectory.deleteEmployee(selectedSignUp);
+        VitalsDirectory.deleteEmployee(selectedSignUp);
 
         JOptionPane.showMessageDialog(this, "Person Details deleted.");
 
@@ -398,7 +398,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         }
 
         DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
-        Doctor su = (Doctor) model.getValueAt(tblVitalsDirectory.getSelectedRow(), 0);
+        Vitals v = (Vitals) model.getValueAt(tblVitalsDirectory.getSelectedRow(), 0);
 
         if (tblVitalsDirectory.getSelectedRowCount()==1) {
 
@@ -414,7 +414,6 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             int BPS = Integer.parseInt(txtBPS.getText());
             int BPD = Integer.parseInt(txtBPD.getText());
 
-            Vitals v = VitalsDirectory.addNewVitals();
 
             v.setDoctorID(DoctorID);
             v.setDoctorName(DoctorName);
@@ -440,7 +439,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             model.setValueAt(BPS, tblVitalsDirectory.getSelectedRow(), 10);
             model.setValueAt(BPD, tblVitalsDirectory.getSelectedRow(), 11);
 
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Vitals Details Updated");
 
             txtPatientName.setText("");
             txtPatientID.setText("");
@@ -498,7 +497,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         for (Vitals su : VitalsDirectory.getVitalsDirectory()){
-            if (String.valueOf(su.getEncounterID()).equals(txtEncounterID.getText())){
+            if (String.valueOf(su.getDoctorID()).equals(txtDoctorID.getText())){
             Object[] row = new Object[13];
             row[0] = su;
             row[1] = su.getVitalID();

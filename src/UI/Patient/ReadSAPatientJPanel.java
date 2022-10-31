@@ -17,7 +17,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class ReadSAPatientJPanel extends javax.swing.JPanel {
 

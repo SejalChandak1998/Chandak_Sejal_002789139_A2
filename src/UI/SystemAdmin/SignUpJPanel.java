@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class SignUpJPanel extends javax.swing.JPanel {
 

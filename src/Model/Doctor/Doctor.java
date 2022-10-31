@@ -6,7 +6,7 @@ package Model.Doctor;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class Doctor {
     

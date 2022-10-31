@@ -6,7 +6,7 @@ package Model.Community;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class Community {
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class VitalsDirectory {
     private ArrayList<Vitals> VitalsDirectory;
@@ -37,6 +37,7 @@ public class VitalsDirectory {
         Vitals newVitals = new Vitals();
         newVitals.setVitalID(id);
         VitalsDirectory.add(newVitals);
+        System.out.print("abcd ==== " + newVitals);
         return newVitals;
     }
     public void deleteEmployee(Vitals h){

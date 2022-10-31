@@ -6,7 +6,7 @@ package Model.Hospital;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class Hospital {
     private int HospitalID;

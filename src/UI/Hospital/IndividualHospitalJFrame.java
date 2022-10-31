@@ -18,7 +18,7 @@ import UI.Patient.ReadHAPatientJPanel;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class IndividualHospitalJFrame extends javax.swing.JFrame {
 

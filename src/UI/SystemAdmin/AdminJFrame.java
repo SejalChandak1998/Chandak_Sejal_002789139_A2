@@ -25,7 +25,7 @@ import UI.Patient.ReadSAPatientJPanel;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class AdminJFrame extends javax.swing.JFrame {
 

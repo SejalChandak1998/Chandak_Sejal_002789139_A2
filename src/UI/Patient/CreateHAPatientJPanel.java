@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class CreateHAPatientJPanel extends javax.swing.JPanel {
 

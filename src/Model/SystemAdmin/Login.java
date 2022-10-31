@@ -6,7 +6,7 @@ package Model.SystemAdmin;
 
 /**
  *
- * @author sejalchandak
+ * @author Sejal Chandak
  */
 public class Login {
     private String Username;
