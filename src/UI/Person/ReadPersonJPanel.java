@@ -401,9 +401,9 @@ public class ReadPersonJPanel extends javax.swing.JPanel {
           JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
           btnUpdateSignUp.setEnabled(false);
         }
-        else if (!Pattern.matches("^(([a-z]|[0-9]){5})$", txtCreatePasswordSignUp.getText())) 
+        else if (!Pattern.matches("^(([a-z]|[0-9]){6})$", txtCreatePasswordSignUp.getText())) 
          {
-             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 6", "Error", JOptionPane.ERROR_MESSAGE);
              btnUpdateSignUp.setEnabled(false);
          }
         else if (!txtCreatePasswordSignUp.getText().equals(txtConfirmPasswordSignUp.getText()))

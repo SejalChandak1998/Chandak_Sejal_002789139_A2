@@ -286,9 +286,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblConfirmPassword))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(39, 39, 39)
                 .addComponent(btnSignUp)
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(395, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -300,7 +300,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         
         if (!Pattern.matches("^\\d+$", txtAgeSignUp.getText())) 
          {
-             JOptionPane.showMessageDialog(null, "Age cannot be Negative!", "Error", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "Age is invalid", "Error", JOptionPane.ERROR_MESSAGE);
              btnSignUp.setEnabled(false);
          }
         else if (!Pattern.matches("^(1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9])$", txtAgeSignUp.getText())) 
@@ -311,17 +311,17 @@ public class SignUpJPanel extends javax.swing.JPanel {
         
         else if (!(Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$", txtDoBSignUp.getText())))
         {
-          JOptionPane.showMessageDialog(null, "Please enter date in mm/dd/yyyy format!", "Error", JOptionPane.ERROR_MESSAGE);
+          JOptionPane.showMessageDialog(null, "Please enter date in mm/dd/yyyy format", "Error", JOptionPane.ERROR_MESSAGE);
           btnSignUp.setEnabled(false);
         }
         else if (!(Pattern.matches("^([0-9]{5})$", txtPinCodeSignUp.getText())))
         {
-          JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
+          JOptionPane.showMessageDialog(null, "Enter 5 digit pincode", "Error", JOptionPane.ERROR_MESSAGE);
           btnSignUp.setEnabled(false);
         }
-        else if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){5})$", txtCreatePasswordSignUp.getText())) 
+        else if (!Pattern.matches("^(([a-z]|[0-9]|[A-Z]){6})$", txtCreatePasswordSignUp.getText())) 
          {
-             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 6", "Error", JOptionPane.ERROR_MESSAGE);
              btnSignUp.setEnabled(false);
          }
         else if (!txtCreatePasswordSignUp.getText().equals(txtConfirmPasswordSignUp.getText()))

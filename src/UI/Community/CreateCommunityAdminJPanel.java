@@ -205,7 +205,7 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
         c.setCreatePassword(CreatePassword);
         c.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Community Details Created and your Community ID is: " + c.getCommunityID());
+        JOptionPane.showMessageDialog(this, "New Community Details Created and Community ID is: " + c.getCommunityID());
 
         txtCommunityName.setText("");
         txtAddress.setText("");

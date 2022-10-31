@@ -22,6 +22,11 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="101" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -54,17 +59,15 @@
                               <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtNameSignUp" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtNameSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                              <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtConfirmPasswordDoctor" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -77,11 +80,6 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -165,18 +163,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Confirm Password:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtConfirmPasswordDoctor">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtConfirmPasswordDoctorActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtConfirmPasswordDoctorKeyPressed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtCreatePasswordDoctor">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCreatePasswordDoctorActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCreatePasswordDoctorKeyPressed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPinCodeSignUp">
       <Properties>
@@ -396,6 +382,10 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFetch1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtCreatePasswordDoctor">
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtConfirmPasswordDoctor">
     </Component>
   </SubComponents>
 </Form>

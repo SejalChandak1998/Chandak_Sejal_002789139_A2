@@ -45,8 +45,6 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblConfirmPassword = new javax.swing.JLabel();
-        txtConfirmPasswordDoctor = new javax.swing.JTextField();
-        txtCreatePasswordDoctor = new javax.swing.JTextField();
         txtPinCodeSignUp = new javax.swing.JTextField();
         txtStateSignUp = new javax.swing.JTextField();
         txtCitySignUp = new javax.swing.JTextField();
@@ -70,34 +68,14 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
         lblPinCode = new javax.swing.JLabel();
         lblCreatePassword = new javax.swing.JLabel();
         btnFetch1 = new javax.swing.JButton();
+        txtCreatePasswordDoctor = new javax.swing.JPasswordField();
+        txtConfirmPasswordDoctor = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(0, 153, 153));
 
         lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblConfirmPassword.setForeground(new java.awt.Color(255, 255, 255));
         lblConfirmPassword.setText("Confirm Password:");
-
-        txtConfirmPasswordDoctor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtConfirmPasswordDoctorActionPerformed(evt);
-            }
-        });
-        txtConfirmPasswordDoctor.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtConfirmPasswordDoctorKeyPressed(evt);
-            }
-        });
-
-        txtCreatePasswordDoctor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCreatePasswordDoctorActionPerformed(evt);
-            }
-        });
-        txtCreatePasswordDoctor.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtCreatePasswordDoctorKeyPressed(evt);
-            }
-        });
 
         txtPinCodeSignUp.setEditable(false);
         txtPinCodeSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +224,10 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(101, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -273,16 +255,15 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
                                 .addComponent(lblState)
                                 .addComponent(lblPinCode))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtAgeSignUp)
-                                    .addComponent(txtAddressSignUp)
-                                    .addComponent(txtCitySignUp)
-                                    .addComponent(txtStateSignUp)
-                                    .addComponent(txtPinCodeSignUp)
-                                    .addComponent(txtCreatePasswordDoctor)
-                                    .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtNameSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(txtAgeSignUp)
+                                .addComponent(txtAddressSignUp)
+                                .addComponent(txtCitySignUp)
+                                .addComponent(txtStateSignUp)
+                                .addComponent(txtPinCodeSignUp)
+                                .addComponent(txtCreatePasswordDoctor)
+                                .addComponent(txtConfirmPasswordDoctor))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblName1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -290,10 +271,6 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
                         .addGap(31, 31, 31)
                         .addComponent(btnFetch)))
                 .addGap(27, 27, 27))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,24 +328,6 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
                 .addContainerGap(262, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtConfirmPasswordDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmPasswordDoctorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtConfirmPasswordDoctorActionPerformed
-
-    private void txtConfirmPasswordDoctorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtConfirmPasswordDoctorKeyPressed
-        // TODO add your handling code here:
-        btnSubmit.setEnabled(true);
-    }//GEN-LAST:event_txtConfirmPasswordDoctorKeyPressed
-
-    private void txtCreatePasswordDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreatePasswordDoctorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCreatePasswordDoctorActionPerformed
-
-    private void txtCreatePasswordDoctorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCreatePasswordDoctorKeyPressed
-        // TODO add your handling code here:
-        btnSubmit.setEnabled(true);
-    }//GEN-LAST:event_txtCreatePasswordDoctorKeyPressed
 
     private void txtPinCodeSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinCodeSignUpActionPerformed
         // TODO add your handling code here:
@@ -464,7 +423,7 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
         d.setCreatePassword(CreatePassword);
         d.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is ");
+        JOptionPane.showMessageDialog(this, "New Doctor Details Created and ID is "+d.getDoctorID());
 
         txtPersonID.setText("");
         txtNameSignUp.setText("");
@@ -536,8 +495,8 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtAddressSignUp;
     private javax.swing.JTextField txtAgeSignUp;
     private javax.swing.JTextField txtCitySignUp;
-    private javax.swing.JTextField txtConfirmPasswordDoctor;
-    private javax.swing.JTextField txtCreatePasswordDoctor;
+    private javax.swing.JPasswordField txtConfirmPasswordDoctor;
+    private javax.swing.JPasswordField txtCreatePasswordDoctor;
     private javax.swing.JTextField txtHospitalID;
     private javax.swing.JTextField txtHospitalName;
     private javax.swing.JTextField txtNameSignUp;

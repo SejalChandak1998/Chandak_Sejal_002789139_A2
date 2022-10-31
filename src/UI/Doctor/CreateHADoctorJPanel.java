@@ -380,7 +380,7 @@ public class CreateHADoctorJPanel extends javax.swing.JPanel {
         d.setCreatePassword(CreatePassword);
         d.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is ");
+        JOptionPane.showMessageDialog(this, "New Doctor Details Created and ID is "+d.getDoctorID());
 
         
         txtPersonID.setText("");

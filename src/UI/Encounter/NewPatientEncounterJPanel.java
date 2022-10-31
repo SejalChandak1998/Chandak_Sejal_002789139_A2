@@ -380,7 +380,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         e.setDate(Date);
         e.setTimeStamp(TimeStamp);
         
-        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is ");
+        JOptionPane.showMessageDialog(this, "Encounter raised with Id "+e.getEncounterID());
 
         txtHospitalName.setText("");
         txtDoctorID.setText("");

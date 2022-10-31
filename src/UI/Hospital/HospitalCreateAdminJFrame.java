@@ -247,7 +247,7 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         h.setCreatePassword(CreatePassword);
         h.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is ");
+        JOptionPane.showMessageDialog(this, "New Hospital Details Created and  Hospital ID is "+h.getHospitalID());
 
         txtHospitalName.setText("");
         txtCommunityID.setText("");
