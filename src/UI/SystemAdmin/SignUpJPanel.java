@@ -83,7 +83,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         lblConfirmPassword.setForeground(new java.awt.Color(255, 255, 255));
         lblConfirmPassword.setText("Confirm Password:");
 
-        txtNameSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtNameSignUp.setBorder(null);
         txtNameSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameSignUpActionPerformed(evt);
@@ -107,7 +107,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtDoBSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtDoBSignUp.setBorder(null);
         txtDoBSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoBSignUpActionPerformed(evt);
@@ -119,35 +119,35 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtAgeSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtAgeSignUp.setBorder(null);
         txtAgeSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtAgeSignUpKeyPressed(evt);
             }
         });
 
-        txtAddressSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtAddressSignUp.setBorder(null);
         txtAddressSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtAddressSignUpKeyPressed(evt);
             }
         });
 
-        txtCitySignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtCitySignUp.setBorder(null);
         txtCitySignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCitySignUpKeyPressed(evt);
             }
         });
 
-        txtStateSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtStateSignUp.setBorder(null);
         txtStateSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtStateSignUpKeyPressed(evt);
             }
         });
 
-        txtPinCodeSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtPinCodeSignUp.setBorder(null);
         txtPinCodeSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPinCodeSignUpActionPerformed(evt);
@@ -159,7 +159,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtConfirmPasswordSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtConfirmPasswordSignUp.setBorder(null);
         txtConfirmPasswordSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtConfirmPasswordSignUpKeyPressed(evt);
@@ -194,7 +194,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         lblPinCode.setForeground(new java.awt.Color(255, 255, 255));
         lblPinCode.setText("Pin Code:");
 
-        txtCreatePasswordSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtCreatePasswordSignUp.setBorder(null);
         txtCreatePasswordSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCreatePasswordSignUpKeyPressed(evt);
@@ -288,7 +288,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
                     .addComponent(lblConfirmPassword))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSignUp)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(422, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

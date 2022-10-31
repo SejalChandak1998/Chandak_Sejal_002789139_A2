@@ -79,6 +79,8 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         lblConfirmPassword = new javax.swing.JLabel();
         txtCommunityID = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 204, 204));
+
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,31 +88,39 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblCity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblCity.setText("City:");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setText("State:");
 
+        lblHospitalName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHospitalName.setText("Name of the Hospital:");
 
+        lblPinCode.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblPinCode.setText("Pin Code:");
 
         txtPinCode.setEditable(false);
 
         txtCommunityName.setEditable(false);
 
+        lblCommunity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblCommunity.setText("Community:");
 
         txtCity.setEditable(false);
 
         jLabel1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
-        jLabel1.setText("Create Records for a new Hospital and its Hospital Admin ");
+        jLabel1.setText("Enter Hospital Details: ");
 
+        lblCreatePassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblCreatePassword.setText("Create Password:");
 
         txtState.setEditable(false);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Community ID:");
 
+        lblConfirmPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblConfirmPassword.setText("Confirm Password:");
 
         txtCommunityID.setEditable(false);
@@ -121,9 +131,6 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -147,15 +154,18 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
                                     .addComponent(txtHospitalName)
                                     .addComponent(txtCommunityName)
                                     .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                                    .addComponent(txtCommunityID))))))
-                .addContainerGap(112, Short.MAX_VALUE))
+                                    .addComponent(txtCommunityID)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel1)))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHospitalName)
                     .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

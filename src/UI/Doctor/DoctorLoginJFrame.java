@@ -65,10 +65,13 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblName1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblName1.setText("Doctor ID:");
 
+        lblName2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblName2.setText("Password:");
 
+        txtDoctorID.setBackground(new java.awt.Color(0, 255, 255));
         txtDoctorID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoctorIDActionPerformed(evt);
@@ -80,6 +83,9 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPassword.setBackground(new java.awt.Color(0, 255, 255));
+
+        btnLogIn.setForeground(new java.awt.Color(0, 204, 204));
         btnLogIn.setText("Log In");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +93,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setForeground(new java.awt.Color(0, 204, 204));
         btnLogOut.setText("Back");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +106,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addContainerGap(85, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)

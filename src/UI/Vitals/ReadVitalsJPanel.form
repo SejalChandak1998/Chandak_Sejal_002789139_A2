@@ -43,7 +43,7 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtDoctorName" pref="298" max="32767" attributes="0"/>
+                                      <Component id="txtDoctorName" pref="311" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="txtSearchPerson" max="32767" attributes="0"/>
                               </Group>
@@ -179,7 +179,7 @@
                   <Component id="txtBPS" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtBPD" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="261" max="32767" attributes="0"/>
+              <EmptySpace pref="260" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

@@ -60,8 +60,10 @@ public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblName2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblName2.setText("Password:");
 
+        txtCommunityID.setBackground(new java.awt.Color(51, 255, 255));
         txtCommunityID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCommunityIDActionPerformed(evt);
@@ -73,6 +75,9 @@ public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        txtPassword.setBackground(new java.awt.Color(51, 255, 255));
+
+        btnLogIn.setBackground(new java.awt.Color(0, 204, 204));
         btnLogIn.setText("Log In");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +85,7 @@ public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogOut.setBackground(new java.awt.Color(0, 204, 204));
         btnLogOut.setText("Back");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +93,7 @@ public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblName1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblName1.setText("Community ID:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -94,7 +101,7 @@ public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)

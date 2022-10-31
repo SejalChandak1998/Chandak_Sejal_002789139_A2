@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="99" red="66" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -24,24 +29,25 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="51" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="btnUpdateHospital" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtCreatePassword" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Component id="txtConfirmPassword" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Component id="txtPinCode" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Component id="txtState" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Component id="txtCity" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                              <Component id="txtHospitalName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtCreatePassword" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="txtPinCode" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="txtState" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="txtCity" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="txtHospitalName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtConfirmPassword" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnUpdateHospital" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -127,10 +133,9 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnUpdateHospital" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnUpdateHospital" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="175" max="32767" attributes="0"/>
+              <EmptySpace pref="215" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -229,7 +234,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Name of the Hospital:"/>
+        <Property name="text" type="java.lang.String" value="Hospital Name : "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

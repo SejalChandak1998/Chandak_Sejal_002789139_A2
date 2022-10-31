@@ -66,6 +66,8 @@ for(Vitals selectedSignUp : VitalsDirectory.getVitalsDirectory()){
         txtPatientID = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 204, 204));
+
         tblVitalsDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
